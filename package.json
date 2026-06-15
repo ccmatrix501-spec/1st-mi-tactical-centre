@@ -1,0 +1,53 @@
+{
+  "name": "1st-m-i-tactical-centre",
+  "version": "1.3.6",
+  "description": "1st M.I. Tactical Centre application",
+  "author": "Matrix501",
+  "main": "electron/main.cjs",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "clean": "node scripts/clean.cjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "electron .",
+    "dist": "npm run clean && npm run build && electron-builder",
+    "deploy:web": "npm run build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.5",
+    "typescript": "^5.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "Matrix501.1stMITacticalCentre",
+    "productName": "1st MI Tactical Centre",
+    "executableName": "1st MI Tactical Centre",
+    "directories": {
+      "output": "app"
+    },
+    "win": {
+      "target": "appx",
+      "signtoolOptions": {
+        "publisherName": "CN=A1EE0800-A7AF-4AEB-84C2-222EB2FC11B4"
+      }
+    },
+    "appx": {
+      "identityName": "Matrix501.1stMITacticalCentre",
+      "publisher": "CN=A1EE0800-A7AF-4AEB-84C2-222EB2FC11B4",
+      "publisherDisplayName": "Matrix501",
+      "applicationId": "Matrix501.1stMITacticalCentre",
+      "displayName": "1st MI Tactical Centre"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
