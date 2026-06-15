@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/1st-mi-tactical-centre/"
+  base: "1st-mi-tactical-centre"
 });
