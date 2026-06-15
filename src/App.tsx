@@ -5347,6 +5347,144 @@ export default function App() {
             font-size: 12px;
           }
 
+          @media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  .app {
+    width: 100vw !important;
+    min-height: 100dvh !important;
+    height: auto !important;
+    overflow: auto !important;
+  }
+
+  .app-body {
+    height: auto !important;
+    min-height: calc(100dvh - 90px) !important;
+    overflow: visible !important;
+    padding: 8px !important;
+  }
+
+  .topbar,
+  .brand,
+  .tabs,
+  .tab-row {
+    flex-wrap: wrap !important;
+  }
+
+  .brand h1 {
+    font-size: 18px !important;
+    line-height: 1.1 !important;
+  }
+
+  .brand img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .tabs {
+    display: flex !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    padding-bottom: 6px !important;
+  }
+
+  .tabs .btn,
+  .tab-row .btn,
+  .btn {
+    min-height: 40px !important;
+    font-size: 12px !important;
+    padding: 8px 10px !important;
+  }
+
+  .two-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    gap: 10px !important;
+  }
+
+  .two-panel > aside,
+  .two-panel > main {
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .grid-two {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .card {
+    padding: 10px !important;
+    border-radius: 10px !important;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px !important;
+  }
+
+  .textbox {
+    min-height: 90px !important;
+  }
+
+  .map-card,
+  .map-stage,
+  .map-canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .map-canvas {
+    height: auto !important;
+    min-height: 320px !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  .map-stage {
+    height: auto !important;
+    min-height: 320px !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  .map-marker {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .dropdown-menu {
+    max-height: 260px !important;
+    overflow-y: auto !important;
+  }
+
+  .help-button {
+    left: 8px !important;
+    bottom: 8px !important;
+  }
+
+  .credits,
+  .credit-text {
+    position: static !important;
+    text-align: center !important;
+    font-size: 10px !important;
+    margin-top: 8px !important;
+  }
+}
+
       `}</style>
 
       <header className="app-header">
